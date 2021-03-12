@@ -20,3 +20,22 @@ Then click on the + icon select JARs or Directories and navigate to the mySQL Co
 whomever runs the server. The JDBC class will create a database and a table if they don’t already exist as well as add some random users to the database. The users code will have to be commented out after the initial running otherwise a duplicate entry error occurs.
 
 Now we sit back and wait for the clients to connect.
+
+## Client
+
+The client can be started from the command line using telnet:
+
+                telnet localhost 8191
+
+This will initiate contact with the server and prompt various messages about the chat room. The server will ask for the user’s name which will be cross-referenced with the names in the database. If the name is good you are entered into the chat. Once there a user can enter cmd get a lost of commands that can be run. Current commands are:
+
+• cmd – Lists commands
+
+• private [user] [message] - Sends a direct message to the specified user.
+
+• users – Returns a list of currently online users
+
+• logout – Leave the chat server
+
+If none of those commands are used the client can type a message in the terminal and it will broadcast to all of the
+online users
